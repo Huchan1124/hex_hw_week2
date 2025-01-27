@@ -152,13 +152,14 @@ function App() {
                   </div>
                   <h5 className="mt-3">更多圖片：</h5>
                   <div className="d-flex flex-wrap">
-                    {tempProduct.imagesUrl?.map((url, index) => (
+                    {tempProduct.imagesUrl?.filter(url => url).map((url, index) => (
                       <img
                         key={index}
                         src={url}
                         className="images img-fluid"
                         alt="副圖"
                       />
+
                     ))}
                   </div>
                 </div>
